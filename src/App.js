@@ -1,22 +1,24 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
+import FullSection from "./components/FullSection/FullSection";
+import AboutPage from "./components/AboutPage/AboutPage";
 
 function App() {
   return (
     <Router>
       <NavBar />
-      <Switch>
+      <FullSection>
         <Route path="/projects">
           <h1>Project</h1>
         </Route>
         <Route path="/skills">
           <h1>skills</h1>
         </Route>
-        <Route path="/">
-          <h1>home</h1>
+        <Route exact path="/">
+          <AboutPage />
         </Route>
-      </Switch>
+      </FullSection>
     </Router>
   );
 }
