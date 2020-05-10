@@ -1,10 +1,12 @@
-.nav-button {
+.nav-button,
+.nav-button > div > h3 {
   font-family: "Source Code Pro", monospace;
   color: #7ac7c4;
   /* font-size: 2rem; */
 }
 
-.nav-button:hover {
+.nav-button:hover,
+.nav-button > div > h3:hover {
   color: #f73859;
   text-decoration: none;
 }
